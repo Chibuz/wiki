@@ -9,7 +9,7 @@
     <div class="header"><h1>Web application development - Wiki</h1>
     	<h1>Thought For The Day</h1>
 		<h2>Your online source for quotes, observations and pithy one-liners</h2>
-	</di>v
+	</div>
     <div class="nav">
         <ul>
 					<li><a href="/">Home</a></li>
@@ -22,7 +22,7 @@
 								<li><a href="/admincontrols">Administration</a></li>
 								<li><a href="/edit">Edit</a></li>
 							<% end %>
-						<br>Logged in as <li><a href="/user/<%= $credentials[0] %>"><b><%= $credentials[0] %></b></a></li>
+						<p>Logged in as </p><li><a href="/user/<%= $credentials[0] %>"><b><%= $credentials[0] %></b></a></li>
 					<% else %>
 						<li><a href="/login">Login</a></li>
 						<li><a href="/createaccount">Register</a></li>
@@ -31,17 +31,19 @@
         </ul>
     </div
         
-        <div class="sidebar"><%= @words %></div>
+    <div class="sidebar">
+      	<h3>The wordcount is:</h><%= @words %> 
+    </div>
 
-			<div class="body">
-				<%= yield %>  
-			</div>
+	<div class="body">
+		<%= yield %>  
+	</div>
 
-			<div class="footer">
-				Modified from materials created by Andrew McLeman
-			</div>
+	<div class="footer">
+		<p>Modified from materials created by Andrew McLeman.</p>
+	</div>
 		
-		</div>
+</div>
 
-	</body>
+</body>
 </html> 

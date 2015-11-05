@@ -67,8 +67,7 @@ get '/' do
     erb :home
 end 
 
-get '/about' do 
-    
+get '/about' do     
     erb :about
 end
 

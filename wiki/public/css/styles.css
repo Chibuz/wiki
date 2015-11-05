@@ -1,3 +1,8 @@
+html, body {
+    padding: 0px;
+    margin:0px;
+}
+
 .wrapper {
     position: relative;
     width: 100%;
@@ -5,53 +10,57 @@
 }
 
 .header {
+    margin-top: 0px;
     text-align: center;
-    background-color:black;
+    background-color:#0066FF;
     width: 100%;
+    height: auto;
     position: relative;
     float: left;
     padding: 0px;
+    color: black;
+    border-bottom: 2px solid #000099;
 }
 
 .nav {
     padding: 0px;
-    background-color: green;
+    background-color: #0066FF;
     width: 100%;
     height: 30px;
     position: relative;
     float: left;
+    border-top: 2px solid #000099;
+    color: black;
 }
 
 .sidebar {
-    background-color:green;
-    width: 30%;
-    height: 180px;
+    background-color: #0066FF;
+    width: 300px;
+    height: 100%;
     position: relative;
     float: left;
+    color: black;
+    border-right: 2px solid #000099;
 }
 
 .body {
     text-align: center;
-    background-color:grey;
+    background-color:#0066FF;
     width: 70%;
-    height: 180px;
+    height: 100%;
     position: relative;
     float: right;
 }
 
 .footer {
+    border-top: 2px solid #000099;
     text-align: center;
-    background-color:brown;
+    background-color:#0066FF;
     width: 100%;
     height: 30px;
-    position: relative;
+    bottom: 0px;
+    position: fixed;
     float: left;
-}
-
-
-.header h1 {
-    color: orange;
-    text-align: center;
 }
 
 p {
@@ -62,24 +71,24 @@ p {
 .nav ul {
     list-style-type: none;
     margin: 0;
-    padding: 0;
+    padding-left: 20px;
 } 
 
 .nav a {
     display: block;
-    width: 60px;
+    margin-right: 20px;
+    border-right: 1px solid #000099;
+    padding-right: 20px;
+}
+
+.nav a:hover {
+    display: block;
+    font-weight: bold;
 }
 
 .nav li {
     display: inline;
     text-decoration:none;
-}
-
-.nav li {
     float: left;
-}
-
-.nav a {
-    display: block;
-    width: 60px;
+    text-decoration: none;
 }
