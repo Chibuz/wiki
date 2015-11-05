@@ -1,0 +1,13 @@
+<b>Menu</b><br>
+<a href="/">Home</a><br>
+<a href="/create">Create</a><br>
+<a href="/about">About</a><br>
+<a href="/edit">Edit</a><br>
+<a href="/login">Login</a><br>
+<br><br> 
+<h2>User</h2>
+<% if @Userz %> 
+<article>
+    <h1>Account-<%= @Userz.username %></h1>
+</article>
+<% end %>

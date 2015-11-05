@@ -1,0 +1,18 @@
+<b>Menu</b><br> 
+<a href="/">Home</a><br>
+<a href="/create">Create</a><br>
+<a href="/about">About</a><br> 
+<a href="/edit">Edit</a><br>
+<br><br>
+<section id="add">
+<p>Enter text in the field below to save.</p>
+<form action="/save" method="post">
+<textarea rows="200" cols="250" name="message" placeholder="<%= @extant %>">
+</textarea> <br /r>
+<button type="submit" name="save">save</button>
+<button type="reset" name="cancel" onclick=location.href="/">Cancel</button>
+</form>
+</section>
+<h2>This is your own personal create page!</h2>
+<section id="add">'  + $myinfo + '</section>
+</body></html>

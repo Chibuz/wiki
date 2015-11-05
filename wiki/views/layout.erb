@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Wiki</title>
+  	<link rel="stylesheet" type="text/css" href="/css/styles.css">
+</head>
+<body>
+<div class="wrapper">
+    <div class="header"><h1>Web application development - Wiki</h1>
+    	<h1>Thought For The Day</h1>
+		<h2>Your online source for quotes, observations and pithy one-liners</h2>
+	</di>v
+    <div class="nav">
+        <ul>
+					<li><a href="/">Home</a></li>
+					<li><a href="/about">About Us</a></li>
+					<% if $credentials %>
+						<% if $credentials[0] != '' %>
+							<li><a href="/create">Create a post</a></li>
+							<li><a href="/logout">Logout</a></li>
+							<% if $credentials[0] == "Admin" %>
+								<li><a href="/admincontrols">Administration</a></li>
+								<li><a href="/edit">Edit</a></li>
+							<% end %>
+						<br>Logged in as <li><a href="/user/<%= $credentials[0] %>"><b><%= $credentials[0] %></b></a></li>
+					<% else %>
+						<li><a href="/login">Login</a></li>
+						<li><a href="/createaccount">Register</a></li>
+				    	<% end %>
+                    <% end %>
+        </ul>
+    </div
+        
+        <div class="sidebar"><%= @words %></div>
+
+			<div class="body">
+				<%= yield %>  
+			</div>
+
+			<div class="footer">
+				Modified from materials created by Andrew McLeman
+			</div>
+		
+		</div>
+
+	</body>
+</html> 
